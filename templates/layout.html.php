@@ -4,7 +4,26 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="jokes.css">
     <title>Joke System</title>
-
+    <style>
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        background: #333;
+    }
+    nav ul li {
+        margin: 0;
+        padding: 10px 20px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+    /* nav ul li a:hover {
+        background: #555;
+    } */
+</style>
 </head>
 
 <body>
