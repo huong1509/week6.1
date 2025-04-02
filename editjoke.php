@@ -9,13 +9,14 @@ try {
         $stmt->bindValue(':id', $_POST['jokeid']);
         $stmt->execute();
         header('location: jokes.php');
-        
+
     } else {
-        $sql = 'SELECT * FROM joke WHERE id = :id';
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(':id', $_GET['id']);
-        $stmt->execute();
-        $joke = $stmt->fetch();
+        // $sql = 'SELECT * FROM joke WHERE id = :id';
+        // $stmt = $pdo->prepare($sql);
+        // $stmt->bindValue(':id', $_GET['id']);
+        // $stmt->execute();
+        // $joke = $stmt->fetch();
+        $joke = getJoke($pdo, $_GET['id']);
         $title = 'Edit joke';
 
         ob_start();
