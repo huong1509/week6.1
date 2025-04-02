@@ -32,8 +32,9 @@
         <ul>
             <li><a href="index.php">Home</a></li>
             <li><a href="jokes.php">Jokes List</a></li>
-            <li><a href="addjoke.php">Add a new joke</a></li>
+            <!-- <li><a href="addjoke.php">Add a new joke</a></li> -->
             <li><a href="searchjoke.php">Search joke</a></li>
+            <li><a href="admin/jokes.php">Search joke</a></li>
         </ul>
     </nav>
     <main bgcolor = 'pink'>
