@@ -29,7 +29,7 @@
 </head>
 
 <body>
-    <header><h1>Internet Joke Database Admin Area   <br>
+    <header id="admin"><h1>Internet Joke Database Admin Area   <br>
                 Manage Jokes, categories and authors
     </h1></header>
     <nav>

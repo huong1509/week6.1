@@ -15,7 +15,7 @@ try {
     $totalJokes = totalJokes($pdo);
 
     ob_start();  
-    include 'templates/jokes.html.php'; 
+    include 'templates/public_jokes.html.php'; 
     $output = ob_get_clean(); 
 } catch (PDOException $e) { 
     $output = 'Database error: ' . $e->getMessage(); 
