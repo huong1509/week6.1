@@ -38,5 +38,16 @@ function addJoke($pdo, $joketext, $authorid, $categoryid) {
     query($pdo, $query, $parameters);
 }
 
+function allAuthors($pdo){
+    $authors = query($pdo, 'SELECT * FROM author');
+    return $authors->fetchAll();
+}
+
+function allCategories($pdo){
+    $categories = query($pdo, 'SELECT * FROM category');
+    return $categories->fetchAll();
+}
+
+
 ?>
 

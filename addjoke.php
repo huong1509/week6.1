@@ -23,11 +23,10 @@
         }
     } else { 
         include 'includes/DatabaseConnection.php';
+        include 'includes/DatabaseFunction.php';
         $title = 'Add a new joke';
-        $sql_a = 'select * from author';
-        $authors = $pdo->query($sql_a);
-        $sql_c = 'select * from categories';
-        $categories = $pdo->query($sql_c);
+        $sql_a = allAuthors($pdo);
+        $sql_c = allCategories($pdo);
         ob_start(); 
         include 'templates/addjoke.html.php'; 
         $output = ob_get_clean(); 
