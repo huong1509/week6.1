@@ -1,4 +1,6 @@
 <table border='1'>
+<p><?=$totalJokes?> jokes have been submitted to the Internet Joke Database.</p>
+
 <tr>
     <th> <?= htmlspecialchars('ID') ?> </th>
     <th> <?= htmlspecialchars('Joketext') ?> </th>
@@ -9,6 +11,7 @@
     <th> <?= htmlspecialchars('Edit') ?> </th>
     <th> <?= htmlspecialchars('Action') ?> </th>
 </tr>
+
 <?php foreach ($jokes as $joke):?>
     <tr>
     <blockquote>
