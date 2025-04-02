@@ -1,7 +1,12 @@
 <?php
+function query($pdo, $sql){
+    $query = $pdo->prepare($sql);
+    $query->excute();
+    return $query;
+}
+
 function totalJokes($pdo){
-    $query = $pdo->prepare('SELECT COUNT(*)FROM joke ');
-    $query->execute();
+    $query = query($pdo,'SELECT COUNT(*)FROM joke ');
     $row = $query->fetch();
     return $row[0];
 }
