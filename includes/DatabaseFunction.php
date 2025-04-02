@@ -17,5 +17,10 @@ function getJoke($pdo, $id) {
     return $query->fetch();
 }
 
+function updateJoke($pdo, $jokeid, $joketext) {
+    $parameters = [':id'=> $jokeid, ':joketext' => $joketext];
+    $query = query($pdo, 'UPDATE joke SET joketext = :joketext WHERE id = :id', $parameters);
+}
+
 ?>
 
