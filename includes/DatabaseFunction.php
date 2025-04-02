@@ -1,7 +1,7 @@
 <?php
-function query($pdo, $sql){
+function query($pdo, $sql,$parameters = []){
     $query = $pdo->prepare($sql);
-    $query->excute();
+    $query->excute($parameters);
     return $query;
 }
 

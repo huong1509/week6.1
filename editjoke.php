@@ -1,5 +1,6 @@
 <?php
 include 'includes/DatabaseConnection.php';
+include 'includes/DatabaseFunction.php';
 try {
     if(isset($_POST['joketext'])) {
         $sql = 'UPDATE joke SET joketext = :joketext WHERE id = :id';
@@ -8,6 +9,7 @@ try {
         $stmt->bindValue(':id', $_POST['jokeid']);
         $stmt->execute();
         header('location: jokes.php');
+        
     } else {
         $sql = 'SELECT * FROM joke WHERE id = :id';
         $stmt = $pdo->prepare($sql);
