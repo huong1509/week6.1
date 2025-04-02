@@ -10,4 +10,12 @@ function totalJokes($pdo){
     $row = $query->fetch();
     return $row[0];
 }
+
+function getJoke($pdo, $id) {
+    $parameters = [':id'=> $id];
+    $query = query($pdo, 'SELECT * FROM joke WHERE id =:id', $parameters);
+    return $query->fetch();
+}
+
 ?>
+
