@@ -44,7 +44,7 @@ function allAuthors($pdo){
 }
 
 function allCategories($pdo){
-    $categories = query($pdo, 'SELECT * FROM category');
+    $categories = query($pdo, 'SELECT * FROM categories');
     return $categories->fetchAll();
 }
 
