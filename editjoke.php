@@ -3,11 +3,12 @@ include 'includes/DatabaseConnection.php';
 include 'includes/DatabaseFunction.php';
 try {
     if(isset($_POST['joketext'])) {
-        $sql = 'UPDATE joke SET joketext = :joketext WHERE id = :id';
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindValue(':joketext', $_POST['joketext']);
-        $stmt->bindValue(':id', $_POST['jokeid']);
-        $stmt->execute();
+        // $sql = 'UPDATE joke SET joketext = :joketext WHERE id = :id';
+        // $stmt = $pdo->prepare($sql);
+        // $stmt->bindValue(':joketext', $_POST['joketext']);
+        // $stmt->bindValue(':id', $_POST['jokeid']);
+        // $stmt->execute();
+        updateJoke($pdo, $_POST['jokeid'], $_POST['joketext']);
         header('location: jokes.php');
 
     } else {
