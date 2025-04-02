@@ -9,6 +9,7 @@ try {
     // $stmt = $pdo->prepare($sql);
     // $stmt->bindValue(':id', $_POST['id']);
     // $stmt->execute();
+    
     deleteJoke($pdo, $_POST['id']);
     header('Location: jokes.php');
     exit();

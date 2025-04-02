@@ -8,6 +8,7 @@ try {
         // $stmt->bindValue(':joketext', $_POST['joketext']);
         // $stmt->bindValue(':id', $_POST['jokeid']);
         // $stmt->execute();
+        
         updateJoke($pdo, $_POST['jokeid'], $_POST['joketext']);
         header('location: jokes.php');
 
