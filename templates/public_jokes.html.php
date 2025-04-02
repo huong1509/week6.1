@@ -8,7 +8,7 @@
     <th> <?= htmlspecialchars('Image') ?> </th>
     <th> <?= htmlspecialchars('Email') ?> </th>
     <th> <?= htmlspecialchars('Category') ?> </th>
-    <th> <?= htmlspecialchars('Edit') ?> </th>
+
 </tr>
 
 <?php foreach ($jokes as $joke):?>
@@ -24,12 +24,8 @@
         
         <td> <?= htmlspecialchars($joke['categoryName']) ?> </td>
 
-        <td><a href="editjoke.php?id=<?=$joke['id']?>">Edit</a> </td>
 
-        <!-- <form action="deletejoke.php" method="post">
-            <input type="hidden" name="id" value="<?=$joke['id']?>"> 
-            <td> <input type="submit" value="Delete"> </td>
-        </form> -->
+
     </blockquote>
     </tr>
 <?php endforeach;?>
