@@ -48,6 +48,13 @@ function allCategories($pdo){
     return $categories->fetchAll();
 }
 
+function allJokes($pdo) {
+    $jokes = query($pdo, 'SELECT joke.id, joketext, jokedate, image, `name`, email, categoryName FROM joke 
+            INNER JOIN author ON authorid = author.id
+            INNER JOIN categories on categoryid = categories.id'
+            );
+    return $jokes->fetchAll();
+}
 
 ?>
 
