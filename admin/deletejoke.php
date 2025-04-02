@@ -1,8 +1,8 @@
 <?php
 
 try {
-    include 'includes/DatabaseConnection.php';
-    include 'includes/DatabaseFunction.php';
+    include '../includes/DatabaseConnection.php';
+    include '../includes/DatabaseFunction.php';
 
 
     // $sql = "DELETE FROM joke WHERE id = :id";
@@ -18,6 +18,6 @@ try {
     $output = 'Unable to delete joke: ' . $e->getMessage();
 }
 
-include 'templates/layout.html.php';
+include '../templates/admin_layout.html.php';
 
 ?>

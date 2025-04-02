@@ -1,8 +1,8 @@
 <?php
     if(isset($_POST['joketext'])){
         try{
-            include 'includes/DatabaseConnection.php';
-            include 'includes/DatabaseFunction.php';
+            include '../includes/DatabaseConnection.php';
+            include '../includes/DatabaseFunction.php';
             // $sql = 'INSERT INTO joke SET
             // joketext = :joketext,
             // jokedate = CURDATE(),
@@ -23,17 +23,17 @@
         }
 
     } else { 
-        include 'includes/DatabaseConnection.php';
-        include 'includes/DatabaseFunction.php';
+        include '../includes/DatabaseConnection.php';
+        include '../includes/DatabaseFunction.php';
         $title = 'Add a new joke';
 
         $authors = allAuthors($pdo);
         $categories = allCategories($pdo);
 
         ob_start(); 
-        include 'templates/addjoke.html.php'; 
+        include '../templates/addjoke.html.php'; 
         $output = ob_get_clean(); 
     }
 
-    include 'templates/layout.html.php'; 
+    include '../templates/admin_layout.html.php'; 
 ?>

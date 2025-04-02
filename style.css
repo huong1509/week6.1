@@ -1,0 +1,30 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+header {
+    display: block;
+    background-color: #3cbc8d;
+    padding: 10px;
+}
+
+
+#admin {
+    background-color: #666fd2;
+}
+
+
+h1 {
+    font-weight: normal;
+    padding: 1.5em;
+    color: white;
+    text-align: center;
+}

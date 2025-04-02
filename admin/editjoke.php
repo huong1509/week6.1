@@ -1,6 +1,6 @@
 <?php
-include 'includes/DatabaseConnection.php';
-include 'includes/DatabaseFunction.php';
+include '../includes/DatabaseConnection.php';
+include '../includes/DatabaseFunction.php';
 try {
     if(isset($_POST['joketext'])) {
         // $sql = 'UPDATE joke SET joketext = :joketext WHERE id = :id';
@@ -22,12 +22,12 @@ try {
         $title = 'Edit joke';
 
         ob_start();
-        include 'templates/editjoke.html.php';
+        include '../templates/editjoke.html.php';
         $output = ob_get_clean();
     }
 } catch (PDOException $e) {
     $title = 'error has occurred';
     $output = 'Error editing joke: ' . $e->getMessage();
 }
-include 'templates/layout.html.php';
+include '../templates/admin_layout.html.php';
 ?>

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="jokes.css">
+    <link rel="stylesheet" href="../style.css">
     <title>Joke System</title>
+
     <style>
     nav ul {
         list-style: none;
@@ -24,16 +25,19 @@
         background: #555;
     } */
 </style>
+
 </head>
 
 <body>
-    <header><h1>Internet Joke Database</h1></header>
+    <header><h1>Internet Joke Database Admin Area   <br>
+                Manage Jokes, categories and authors
+    </h1></header>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li><a href="../index.php">Public Site</a></li>
             <li><a href="jokes.php">Jokes List</a></li>
-            <!-- <li><a href="addjoke.php">Add a new joke</a></li> -->
-            <li><a href="admin/jokes.php">Admin</a></li>
+            <li><a href="addjoke.php">Add a new joke</a></li>
+
         </ul>
     </nav>
     <main bgcolor = 'pink'>
