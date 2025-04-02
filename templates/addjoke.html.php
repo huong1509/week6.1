@@ -12,7 +12,7 @@
     </select> 
 
     <select name="category">
-        <option value="">Select an category</option>
+        <option value="">Select an category </option>
         <?php foreach ($categories as $category):?>
             <option value="<?=htmlspecialchars($category['id'], ENT_QUOTES, 'UTF-8'); ?>">
             <?=htmlspecialchars($category['categoryName'], ENT_QUOTES, 'UTF-8'); ?>    
