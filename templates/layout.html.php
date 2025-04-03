@@ -1,3 +1,7 @@
+<?php
+$base_url = '/week6.1';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +34,10 @@
     <header><h1>Internet Joke Database</h1></header>
     <nav>
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="jokes.php">Jokes List</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
-            <li><a href="admin/jokes.php">Admin</a></li>
+            <li><a href="<?=$base_url?>/index.php">Home</a></li>
+            <li><a href="<?=$base_url?>/jokes.php">Jokes List</a></li>
+            <li><a href="<?=$base_url?>/mail/sendmail.php">Contact Us</a></li>
+            <li><a href="<?=$base_url?>/admin/jokes.php">Admin</a></li>
         </ul>
     </nav>
     <main bgcolor = 'pink'>
