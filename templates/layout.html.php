@@ -31,7 +31,7 @@ $base_url = '/week6.1';
 </head>
 
 <body>
-    <header><h1>Internet Joke Database</h1></header>
+    <header><h1><?= $title  ?></h1></header>
     <nav>
         <ul>
             <li><a href="<?=$base_url?>/index.php">Home</a></li>

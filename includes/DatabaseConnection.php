@@ -4,5 +4,9 @@
     $username = 'root';
     $pw = '';
 
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $pw);
+        $pdo = new PDO("mysql:host=$host,
+                            dbname=$dbname, 
+                            username=$username, 
+                            password=$pw");
+
 ?>
