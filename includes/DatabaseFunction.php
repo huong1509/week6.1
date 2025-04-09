@@ -29,13 +29,14 @@ function deleteJoke($pdo, $jokeid){
     $parameters = [':id' =>$jokeid];
     query($pdo, $query, $parameters);
 }
-function addJoke($pdo, $joketext, $authorid, $categoryid) {
+function addJoke($pdo, $joketext, $fileToUpload,$authorid, $categoryid) {
     $query = 'INSERT INTO joke SET
             joketext = :joketext,
             jokedate = CURDATE(),
+            image = :fileToUpload,
             authorid = :authorid,
             categoryid = :categoryid';
-    $parameters = [':joketext' => $joketext, ':authorid' => $authorid, ':categoryid' => $categoryid];
+    $parameters = [':joketext' => $joketext, ':fileToUpload' => $fileToUpload,':authorid' => $authorid, ':categoryid' => $categoryid];
     query($pdo, $query, $parameters);
 }
 

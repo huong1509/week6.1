@@ -7,7 +7,7 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
 
 $mail = new PHPMailer();
-
+ob_start();
     if(isset($_POST['message'])){
         $title = "contact us";
         $subject = 'a msg from users to admin';
@@ -39,10 +39,10 @@ $mail = new PHPMailer();
         }
     } else {
         $title = 'contact us';
-        ob_start();
-        include '../templates/mailform.html.php';
-        $output = ob_get_clean();
+
     }
     
+    include '../templates/mailform.html.php';
+    $output = ob_get_clean();
 include '../templates/layout.html.php';
 ?>

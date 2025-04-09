@@ -2,6 +2,11 @@
     <label for="joketext">Type your joke here:</label><br><br>  
     <textarea name="joketext" rows="3" cols="40"></textarea>
 
+    <div class="mb-3">
+        <label for="fileToUpload" class="form-label"><h5>Add image here:</h5></label>
+        <input type="file" name="fileToUpload">
+    </div>
+
     <select name="author">
         <option value="">Select an author</option>
         <?php foreach ($authors as $author):?>

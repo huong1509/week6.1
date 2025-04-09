@@ -13,20 +13,21 @@
             // $stmt->bindValue(':authorid', $_POST['author']);
             // $stmt->bindValue(':categoryid', $_POST['category']);
             // $stmt->execute();
-
-            addJoke($pdo, $_POST['joketext'], $_POST['author'], $_POST['category']);
+            
+            addJoke($pdo, $_POST['joketext'], $_FILES['fileToUpload'],$_POST['author'], $_POST['category']);
+            include '../includes/uploadFile.php';
             header('location: jokes.php');
 
         } catch (PDOException $e) { 
             $title = 'An error has occurred';
             $output = 'Database error: ' . $e->getMessage();
         }
-
+        
     } else { 
         include '../includes/DatabaseConnection.php';
         include '../includes/DatabaseFunction.php';
         $title = 'Add a new joke';
-
+        
         $authors = allAuthors($pdo);
         $categories = allCategories($pdo);
 
